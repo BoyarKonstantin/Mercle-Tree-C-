@@ -1,0 +1,4 @@
+﻿  Mercle_tree_cour.cpp
+main.obj : error LNK2019: ссылка на неразрешенный внешний символ "public: __thiscall Node::Node(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (??0Node@@QAE@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) в функции _main.
+Mercle_tree_cour.obj : error LNK2001: неразрешенный внешний символ "public: __thiscall Node::Node(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (??0Node@@QAE@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z).
+C:\Users\Konstantin\source\repos\Mercle_tree_cour\Debug\Mercle_tree_cour.exe : fatal error LNK1120: неразрешенных внешних элементов: 1

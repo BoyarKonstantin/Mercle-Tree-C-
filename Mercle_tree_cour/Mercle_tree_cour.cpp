@@ -6,23 +6,9 @@
 #include <vector>
 #include "misc.h"
 #include <string>
+#include "TreeStruct.h"
 
 using namespace std;
-
-struct Node {
-    string hash;
-    Node* left;
-    Node* right;
-    Node(string data);
-};
-
-struct MerkleTree {
-    Node* root;
-    MerkleTree(std::vector<Node*> blocks);
-    ~MerkleTree();
-    void printTree(Node* n, int indent);
-    void deleteTree(Node* n);
-};
 
 
 MerkleTree::MerkleTree(std::vector<Node*> blocks) {
@@ -30,9 +16,9 @@ MerkleTree::MerkleTree(std::vector<Node*> blocks) {
     while (blocks.size() != 1) {
         printNodeHashes(blocks);
         for (unsigned int l = 0, n = 0; l < blocks.size(); l = l + 2, n++) {
-            if (l != blocks.size() - 1) { // checks for adjacent block
-                nodes.push_back(new Node(hash_sha256(blocks[l]->hash + blocks[l + 1]->hash))); // combine and hash adjacent blocks
-                nodes[n]->left = blocks[l]; // assign children
+            if (l != blocks.size() - 1) { 
+                nodes.push_back(new Node(hash_sha256(blocks[l]->hash + blocks[l + 1]->hash))); 
+                nodes[n]->left = blocks[l]; 
                 nodes[n]->right = blocks[l + 1];
             }
             else {
