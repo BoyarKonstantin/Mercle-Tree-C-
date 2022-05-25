@@ -1,3 +1,4 @@
+#pragma once
 #ifndef NODE_H
 #define NODE_H
 
@@ -11,4 +12,4 @@ struct Node {
     Node(std::string data);
 };
 
-#endif#pragma once
+#endif

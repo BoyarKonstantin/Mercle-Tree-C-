@@ -1,15 +1,14 @@
 #include <iostream>
 #include "TreeStruct.h"
+using namespace std;
 
 int main() {
     std::vector<Node*> leaves;
-
     //create sample data
     leaves.push_back(new Node(hash_sha256("aksl;fjk;kla")));
     leaves.push_back(new Node(hash_sha256("1234")));
-    leaves.push_back(new Node(hash_sha256("!@'kl;fmasl;kjkfl;askl;fkwqop;'fkqwl;'fko;E&")));
-    leaves.push_back(new Node(hash_sha256("asnfklasjkl;fjmwqkl;fjqwkl;fjklwqjfilpwqjfioqwjfipqwjfiop")));
-
+    
+ 
     // initialize leaves
     for (unsigned int i = 0; i < leaves.size(); i++) {
         leaves[i]->left = NULL;
