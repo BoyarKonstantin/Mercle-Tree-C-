@@ -8,8 +8,8 @@ void MercleTree() {
     int CONTINUE;
     std::string HashString;
     /*
-     Объявляем бесконечный цикл который при вводе "2" - завершает программу и выводит дерево,
-     а при "1" - создает новый узел дерева
+     ГЋГЎГєГїГўГ«ГїГҐГ¬ ГЎГҐГ±ГЄГ®Г­ГҐГ·Г­Г»Г© Г¶ГЁГЄГ« ГЄГ®ГІГ®Г°Г»Г© ГЇГ°ГЁ ГўГўГ®Г¤ГҐ "2" - Г§Г ГўГҐГ°ГёГ ГҐГІ ГЇГ°Г®ГЈГ°Г Г¬Г¬Гі ГЁ ГўГ»ГўГ®Г¤ГЁГІ Г¤ГҐГ°ГҐГўГ®,
+     Г  ГЇГ°ГЁ "1" - Г±Г®Г§Г¤Г ГҐГІ Г­Г®ГўГ»Г© ГіГ§ГҐГ« Г¤ГҐГ°ГҐГўГ 
     */
     for (;;) {
         std::cout << "What u want?"
@@ -19,17 +19,17 @@ void MercleTree() {
             << "2) Output ur Mercle Tree" 
             << std::endl;
         std::cin >> CONTINUE;
-        /*Если CONTINUE != 1 or 2 - завершаем программу с сообщением об ошибке*/
+        /*Г…Г±Г«ГЁ CONTINUE != 1 or 2 - Г§Г ГўГҐГ°ГёГ ГҐГ¬ ГЇГ°Г®ГЈГ°Г Г¬Г¬Гі Г± Г±Г®Г®ГЎГ№ГҐГ­ГЁГҐГ¬ Г®ГЎ Г®ГёГЁГЎГЄГҐ*/
         if (CONTINUE == 1 || CONTINUE == 2) {
             if (CONTINUE == 1) {
                 std::cout << "Input ur node";
                 std::cin >> HashString;
-                // Добавляем узел для HashString
+                // Г„Г®ГЎГ ГўГ«ГїГҐГ¬ ГіГ§ГҐГ« Г¤Г«Гї HashString
                 leaves.push_back(new Node(hash_sha256(HashString)));
 
             }
             if (CONTINUE == 2) {
-                //Алгоритм вывода дерева и выход из цикла
+                //ГЂГ«ГЈГ®Г°ГЁГІГ¬ ГўГ»ГўГ®Г¤Г  Г¤ГҐГ°ГҐГўГ  ГЁ ГўГ»ГµГ®Г¤ ГЁГ§ Г¶ГЁГЄГ«Г 
                 for (unsigned int i = 0; i < leaves.size(); i++) {
                     leaves[i]->left = NULL;
                     leaves[i]->right = NULL;
